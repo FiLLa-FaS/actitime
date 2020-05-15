@@ -1,7 +1,9 @@
 .ui-dropdown {
     display: flex;
+    cursor: pointer;
 
-    &:active {
+    &:active,
+    &:hover {
         .ui-dropdown__title {
             color: #9c69e2;
         }
@@ -15,6 +17,7 @@
         font-size: 18px;
         line-height: 160%;
         color: #212353;
+        transition: color 0.2s;
     }
 
     &__icon {
@@ -25,6 +28,7 @@
         display: none;
         &.active {
             display: block;
+            position: relative;
         }
     }
 }

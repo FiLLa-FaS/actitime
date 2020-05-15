@@ -10,29 +10,32 @@ const NavHeader = ({ nav }) => {
             <ul className="nav-header__list">
                 {nav.map((i) => (
                     <li className="nav-header__item">
-                        <a href={i.url} className="nav-header__link">
-                            {i.subnav && (
-                                <UiDropdown
-                                    title={i.name}
-                                    icon={icn_arrow_down}
-                                    activeIcon={icn_arrow_up}
-                                >
-                                    <ul className="nav-header__subnav">
-                                        {i.subnav.map((item) => (
-                                            <li className="subnav__item">
-                                                <a
-                                                    href={item.url}
-                                                    className="subnav__link"
-                                                >
-                                                    {item.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </UiDropdown>
-                            )}
-                            {!i.subnav && i.name}
-                        </a>
+                        {i.subnav && (
+                            <UiDropdown
+                                title={i.name}
+                                icon={icn_arrow_down}
+                                activeIcon={icn_arrow_up}
+                                hover
+                            >
+                                <ul className="nav-header__subnav">
+                                    {i.subnav.map((item) => (
+                                        <li className="subnav__item">
+                                            <span
+                                                href={item.url}
+                                                className="subnav__link"
+                                            >
+                                                {item.name}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </UiDropdown>
+                        )}
+                        {!i.subnav && (
+                            <a href={i.url} className="nav-header__link">
+                                {i.name}
+                            </a>
+                        )}
                     </li>
                 ))}
             </ul>
