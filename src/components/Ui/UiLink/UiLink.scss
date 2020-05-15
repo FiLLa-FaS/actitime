@@ -1,0 +1,21 @@
+.ui-link {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+  color: #212353;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #9c69e2;
+  }
+
+  &__icon {
+    margin-left: 25px;
+  }
+}
