@@ -1,3 +1,3 @@
-import FieldEmail from "./FieldEmail";
+import FieldEmail from './FieldEmail'
 
-export { FieldEmail };
+export { FieldEmail }

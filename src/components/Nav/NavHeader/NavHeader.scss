@@ -1,67 +1,67 @@
 .nav-header {
-  &__list {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-  }
-  &__item {
-    & + & {
-      margin-left: 47px;
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
     }
-  }
-  &__link {
-    position: relative;
-    display: flex;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 160%;
-    color: #212353;
-    text-decoration: none;
-    transition: color 0.2s;
-    &:hover {
-      color: #9c69e2;
+    &__item {
+        & + & {
+            margin-left: 47px;
+        }
     }
-  }
-
-  &__subnav {
-    position: absolute;
-    left: -29px;
-    top: 39px;
-    list-style-type: none;
-    padding: 12px 17px 12px 24px;
-    border: 1px solid #9c69e2;
-    box-shadow: 0px 4px 0px #e2cefe;
-    box-sizing: border-box;
-    border-radius: 10px;
-
-    &::after {
-      position: absolute;
-      top: -10px;
-      left: 60px;
-      width: 18px;
-      height: 18px;
-      content: "";
-      background-color: #fff;
-      border-top: 1px solid #9c69e2;
-      border-left: 1px solid #9c69e2;
-      transform: rotate(45deg);
+    &__link {
+        position: relative;
+        display: flex;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #212353;
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover {
+            color: #9c69e2;
+        }
     }
 
-    .subnav__link {
-      text-decoration: none;
-      white-space: nowrap;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 220%;
-      color: #212353;
-      transition: color 0.2s;
-      &:hover {
-        color: #9c69e2;
-      }
+    &__subnav {
+        position: absolute;
+        left: -29px;
+        top: 39px;
+        list-style-type: none;
+        padding: 12px 17px 12px 24px;
+        border: 1px solid #9c69e2;
+        box-shadow: 0px 4px 0px #e2cefe;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        &::after {
+            position: absolute;
+            top: -10px;
+            left: 60px;
+            width: 18px;
+            height: 18px;
+            content: '';
+            background-color: #fff;
+            border-top: 1px solid #9c69e2;
+            border-left: 1px solid #9c69e2;
+            transform: rotate(45deg);
+        }
+
+        .subnav__link {
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 220%;
+            color: #212353;
+            transition: color 0.2s;
+            &:hover {
+                color: #9c69e2;
+            }
+        }
     }
-  }
 }

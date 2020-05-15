@@ -1,35 +1,35 @@
 header {
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header__left {
-  display: flex;
-  align-items: center;
+.header__column {
+    display: flex;
+    align-items: center;
 }
 .header__nav {
-  margin-left: 130px;
+    margin-left: 130px;
 }
 .header__burger {
-  display: none;
+    display: none;
 }
 
 @media screen and (max-width: 992px) {
-  header {
-    padding: 25px 0;
-  }
-
-  .header__burger {
-    display: block;
-  }
-  .header__right {
-    & button {
-      display: none;
+    header {
+        padding: 25px 0;
     }
-  }
-  .header__nav {
-    display: none;
-  }
+
+    .header__burger {
+        display: block;
+    }
+    .header__column {
+        & button {
+            display: none;
+        }
+    }
+    .header__nav {
+        display: none;
+    }
 }
