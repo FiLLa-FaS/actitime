@@ -1,8 +1,8 @@
 .ui-dropdown {
-  div {
-    display: none;
-    &.active {
-      display: block;
+    div {
+        display: none;
+        &.active {
+            display: block;
+        }
     }
-  }
 }

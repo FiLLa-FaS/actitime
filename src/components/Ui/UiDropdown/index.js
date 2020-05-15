@@ -1,39 +1,29 @@
-import React from "react";
-import "./UiDropdown.scss";
+import React, { useState } from 'react'
+import './UiDropdown.scss'
 
-class UiDropdown extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: true,
-    };
-  }
+const UiDropdown = ({ icon, activeIcon = icon, children }) => {
+    const [active, setActive] = useState(false)
 
-  toggleDropdown = (icon_current, activeIcon, icon) => {
-    const { isActive } = this.state;
-    if (!isActive) {
-      this.setState({ isActive: true });
-      icon_current = activeIcon;
-    } else {
-      this.setState({ isActive: false });
-      icon_current = icon;
+    const toggleDropdown = () => {
+        if (!active) {
+            setActive(true)
+        } else {
+            setActive(false)
+        }
     }
-  };
-  render() {
-    const { icon, activeIcon = icon, children } = this.props;
-    const { isActive } = this.state;
-    const icon_current = icon;
 
     return (
-      <div
-        className="ui-dropdown"
-        onClick={() => this.toggleDropdown(icon_current, activeIcon, icon)}
-      >
-        <img src={icon_current} alt="" />
-        <div className={`${isActive ? "active" : ""}`}>{children}</div>
-      </div>
-    );
-  }
+        <div
+            role="menuitem"
+            tabIndex={0}
+            className="ui-dropdown"
+            onClick={() => toggleDropdown()}
+            onKeyDown={() => toggleDropdown()}
+        >
+            <img src={active ? activeIcon : icon} alt="" />
+            <div className={`${active ? 'active' : ''}`}>{children}</div>
+        </div>
+    )
 }
 
-export default UiDropdown;
+export default UiDropdown
