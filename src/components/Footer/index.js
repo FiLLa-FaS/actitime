@@ -3,7 +3,7 @@ import { NavFooter, UiButton, FieldEmail, Container } from "../";
 import "./Footer.scss";
 import icn_logo_white from "../../assets/icons/icn_logo_white.svg";
 
-const Footer = () => {
+const Footer = ({ nav }) => {
   return (
     <footer>
       <Container>
@@ -12,7 +12,7 @@ const Footer = () => {
             <img src={icn_logo_white} alt="" />
           </div>
           <div className="grid__column grid__column--nav">
-            <NavFooter />
+            <NavFooter nav={nav} />
           </div>
           <div className="grid__column grid__column--big">
             <FieldEmail />

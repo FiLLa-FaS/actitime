@@ -1,25 +1,17 @@
 import React from "react";
 import "./NavHeader.scss";
 
-const NavHeader = () => {
+const NavHeader = ({ nav }) => {
   return (
     <nav className="nav-header__nav">
       <ul className="nav-header__list">
-        <li className="nav-header__item">
-          <a href="#" className="nav-header__link">
-            About
-          </a>
-        </li>
-        <li className="nav-header__item nav-header__item--complex">
-          <a href="#" className="nav-header__link">
-            Help
-          </a>
-        </li>
-        <li className="nav-header__item">
-          <a href="#" className="nav-header__link">
-            Features
-          </a>
-        </li>
+        {nav.map((i) => (
+          <li className="nav-header__item">
+            <a href={i.url} className="nav-header__link">
+              {i.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
