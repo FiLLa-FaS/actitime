@@ -1,0 +1,39 @@
+.nav-footer {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    & + & {
+      margin-left: 54px;
+    }
+  }
+  &__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 250%;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+    &:hover {
+      color: #212353;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav-footer {
+    &__list {
+      display: block;
+    }
+    &__item {
+      & + & {
+        margin-left: 0;
+      }
+    }
+  }
+}

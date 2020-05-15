@@ -1,0 +1,25 @@
+.nav-header {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  &__item {
+    & + & {
+      margin-left: 47px;
+    }
+  }
+  &__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #212353;
+    text-decoration: none;
+    transition: color 0.2s;
+    &:hover {
+      color: #9c69e2;
+    }
+  }
+}

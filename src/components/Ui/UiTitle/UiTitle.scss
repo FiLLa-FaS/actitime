@@ -1,0 +1,21 @@
+.ui-title {
+  text-align: center;
+
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: #212353;
+  }
+
+  &__excerpt {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 160%;
+    color: #4b5d68;
+  }
+}
