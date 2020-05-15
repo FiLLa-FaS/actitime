@@ -1,6 +1,6 @@
 import React from 'react'
 import './CardSlider.scss'
-import { UiLink } from '../'
+import { UiLink } from '..'
 
 const CardSlider = ({ card, latest }) => {
     return (

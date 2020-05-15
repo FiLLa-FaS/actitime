@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavHeader, UiButton, Container } from '../'
+import { NavHeader, UiButton, Container } from '..'
 import './Header.scss'
 import icn_logo from '../../assets/icons/icn_logo.svg'
 import icn_burger from '../../assets/icons/icn_burger.svg'

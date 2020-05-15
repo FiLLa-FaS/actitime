@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavHeader.scss'
-import { UiDropdown } from '../../'
+import { UiDropdown } from '../..'
 import icn_arrow_down from '../../../assets/icons/icn_arrow_small_down.svg'
 import icn_arrow_up from '../../../assets/icons/icn_arrow_small_up.svg'
 

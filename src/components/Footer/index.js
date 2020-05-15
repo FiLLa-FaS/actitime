@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavFooter, UiButton, FieldEmail, Container } from '../'
+import { NavFooter, UiButton, FieldEmail, Container } from '..'
 import './Footer.scss'
 import icn_logo_white from '../../assets/icons/icn_logo_white.svg'
 
