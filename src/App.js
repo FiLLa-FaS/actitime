@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header, Footer, UiTitle } from "./components";
+import { Container, Header, Footer, UiTitle, Slider } from "./components";
 
 function App() {
   const nav_header = [
@@ -21,6 +21,7 @@ function App() {
             title="Features"
             excerpt="Some of the features and advantages that we provide for those of you who store data in this Data Warehouse."
           />
+          <Slider />
         </Container>
       </main>
       <Footer nav={nav_footer} />
