@@ -4,7 +4,15 @@ import { Container, Header, Footer, UiTitle, Slider } from "./components";
 function App() {
   const nav_header = [
     { id: 1, name: "About", url: "/about" },
-    { id: 2, name: "Help", url: "/help" },
+    {
+      id: 2,
+      name: "Help",
+      url: "/help",
+      subnav: [
+        { id: 4, name: "User Guide", url: "/help/guide" },
+        { id: 5, name: "Contact Support", url: "/help/support" },
+      ],
+    },
     { id: 3, name: "Features", url: "/features" },
   ];
   const nav_footer = [
