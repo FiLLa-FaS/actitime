@@ -11,9 +11,9 @@ const NavHeader = ({ nav }) => {
                 {nav.map((i) => (
                     <li className="nav-header__item">
                         <a href={i.url} className="nav-header__link">
-                            {i.name}
                             {i.subnav && (
                                 <UiDropdown
+                                    title={i.name}
                                     icon={icn_arrow_down}
                                     activeIcon={icn_arrow_up}
                                 >
@@ -31,6 +31,7 @@ const NavHeader = ({ nav }) => {
                                     </ul>
                                 </UiDropdown>
                             )}
+                            {!i.subnav && i.name}
                         </a>
                     </li>
                 ))}

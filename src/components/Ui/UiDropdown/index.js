@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './UiDropdown.scss'
 
-const UiDropdown = ({ icon, activeIcon = icon, children }) => {
+const UiDropdown = ({ title, icon, activeIcon = icon, children }) => {
     const [active, setActive] = useState(false)
 
     const toggleDropdown = () => {
@@ -20,7 +20,12 @@ const UiDropdown = ({ icon, activeIcon = icon, children }) => {
             onClick={() => toggleDropdown()}
             onKeyDown={() => toggleDropdown()}
         >
-            <img src={active ? activeIcon : icon} alt="" />
+            {title && <p className="ui-dropdown__title">{title}</p>}
+            <img
+                className="ui-dropdown__icon"
+                src={active ? activeIcon : icon}
+                alt=""
+            />
             <div className={`${active ? 'active' : ''}`}>{children}</div>
         </div>
     )

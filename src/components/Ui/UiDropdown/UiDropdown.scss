@@ -1,4 +1,26 @@
 .ui-dropdown {
+    display: flex;
+
+    &:active {
+        .ui-dropdown__title {
+            color: #9c69e2;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #212353;
+    }
+
+    &__icon {
+        margin-left: 5px;
+    }
+
     div {
         display: none;
         &.active {
