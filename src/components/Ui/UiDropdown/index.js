@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import './UiDropdown.scss'
 
-const UiDropdown = ({ title, icon, activeIcon = icon, children }) => {
+const UiDropdown = ({ title, icon, activeIcon = icon, children, hover }) => {
     const [active, setActive] = useState(false)
 
-    const toggleDropdown = () => {
-        if (!active) {
-            setActive(true)
-        } else {
-            setActive(false)
-        }
+    const toggleDrawer = (state) => () => {
+        setActive(state)
     }
 
     return (
@@ -17,8 +13,9 @@ const UiDropdown = ({ title, icon, activeIcon = icon, children }) => {
             role="menuitem"
             tabIndex={0}
             className="ui-dropdown"
-            onClick={() => toggleDropdown()}
-            onKeyDown={() => toggleDropdown()}
+            onClick={!hover && toggleDrawer(!active)}
+            onKeyDown={toggleDrawer(!active)}
+            onMouseEnter={hover && toggleDrawer(!active)}
         >
             {title && <p className="ui-dropdown__title">{title}</p>}
             <img
