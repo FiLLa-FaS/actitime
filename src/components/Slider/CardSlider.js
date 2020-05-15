@@ -4,13 +4,13 @@ import { UiLink } from "../";
 
 const CardSlider = ({ card, latest }) => {
   return (
-    <div class="slider-card">
-      <div class="slider-card__content">
+    <div className="slider-card">
+      <div className="slider-card__content">
         {latest && <span className="slider-card__new">new</span>}
-        <span class="slider-card__id">{card.id}</span>
-        <h3 class="slider-card__title">{card.name}</h3>
-        <p class="slider-card__info">{card.content}</p>
-        <div class="slider-card__link">
+        <span className="slider-card__id">{card.id}</span>
+        <h3 className="slider-card__title">{card.name}</h3>
+        <p className="slider-card__info">{card.content}</p>
+        <div className="slider-card__link">
           <UiLink>Learn more</UiLink>
         </div>
       </div>
