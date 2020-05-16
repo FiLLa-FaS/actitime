@@ -1,16 +1,29 @@
 import React from 'react'
 import CardSlider from './CardSlider'
+import './Slider.scss'
 
-const Slider = () => {
-    const card = {
-        id: 1,
-        name: 'First Feature',
-        content:
-            'Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.',
-    }
+const Slider = ({ cards }) => {
     return (
-        <div>
-            <CardSlider card={card} latest />
+        <div className="slider">
+            <div className="slider__content">
+                {cards.map((card) => (
+                    <div className="slider__card" id={card.id}>
+                        <CardSlider
+                            id={card.id}
+                            card={card}
+                            latest={card.id === cards.length}
+                        />
+                    </div>
+                ))}
+            </div>
+
+            <div className="slider__nav">
+                {cards.map((card) => (
+                    <a href={`#${card.id}`} className="slider-nav__link">
+                        <span className="slider-nav__item" />
+                    </a>
+                ))}
+            </div>
         </div>
     )
 }

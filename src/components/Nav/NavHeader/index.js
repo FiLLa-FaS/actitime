@@ -20,12 +20,12 @@ const NavHeader = ({ nav }) => {
                                 <ul className="nav-header__subnav">
                                     {i.subnav.map((item) => (
                                         <li className="subnav__item">
-                                            <span
+                                            <a
                                                 href={item.url}
                                                 className="subnav__link"
                                             >
                                                 {item.name}
-                                            </span>
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>
