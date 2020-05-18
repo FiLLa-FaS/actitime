@@ -16,6 +16,7 @@ const UiDropdown = ({ title, icon, activeIcon = icon, children, hover }) => {
             onClick={!hover && toggleDrawer(!active)}
             onKeyDown={toggleDrawer(!active)}
             onMouseEnter={hover && toggleDrawer(!active)}
+            onMouseLeave={hover && toggleDrawer(!active)}
         >
             {title && <p className="ui-dropdown__title">{title}</p>}
             <img

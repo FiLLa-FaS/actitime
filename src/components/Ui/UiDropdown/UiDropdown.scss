@@ -11,6 +11,7 @@
 
     &__title {
         margin: 0;
+        padding-bottom: 30px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 500;
@@ -22,6 +23,7 @@
 
     &__icon {
         margin-left: 5px;
+        padding-bottom: 30px;
     }
 
     div {
@@ -29,6 +31,37 @@
         &.active {
             display: block;
             position: relative;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ui-dropdown {
+        display: block;
+        position: relative;
+        // justify-content: space-between;
+        &__title {
+            padding-bottom: 0;
+        }
+
+        &__icon {
+            position: absolute;
+            right: 0;
+            top: calc(14.5px - 9px);
+            padding-bottom: 0;
+        }
+        &:hover {
+            .ui-dropdown__title {
+                color: #212353;
+            }
+        }
+        &:active {
+            .ui-dropdown__title {
+                color: #212353;
+            }
+            .ui-dropdown__icon {
+                top: calc(14.5px - 5.5px);
+            }
         }
     }
 }
