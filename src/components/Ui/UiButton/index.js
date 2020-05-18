@@ -3,7 +3,7 @@ import './UiButton.scss'
 
 const UiButton = ({ className, children }) => {
     return (
-        <button type="button" className={className}>
+        <button type="button" className={`ui-button ${className}`}>
             {children}
         </button>
     )
