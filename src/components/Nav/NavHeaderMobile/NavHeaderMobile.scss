@@ -1,0 +1,45 @@
+.nav-mobile {
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        padding: 10px 20px;
+        border-bottom: 1px solid #d6b9ff;
+        &:first-child {
+            border-top: 1px solid #d6b9ff;
+        }
+    }
+    &__link {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 277%;
+        color: #212353;
+    }
+
+    .subnav-mobile {
+        &__list {
+            display: block;
+            list-style-type: none;
+            padding: 0 20px;
+            margin: 0 -20px;
+            background-color: #f9f4ff;
+        }
+        &__item {
+            padding: 0;
+            margin: 0;
+        }
+        &__link {
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 277%;
+            color: #212353;
+        }
+    }
+}
