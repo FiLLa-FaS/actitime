@@ -9,7 +9,7 @@ const NavHeader = ({ nav }) => {
         <nav className="nav-header__nav">
             <ul className="nav-header__list">
                 {nav.map((i) => (
-                    <li className="nav-header__item">
+                    <li key={i.id} className="nav-header__item">
                         {i.subnav && (
                             <UiDropdown
                                 title={i.name}
@@ -19,7 +19,10 @@ const NavHeader = ({ nav }) => {
                             >
                                 <ul className="nav-header__subnav">
                                     {i.subnav.map((item) => (
-                                        <li className="subnav__item">
+                                        <li
+                                            key={item.id}
+                                            className="subnav__item"
+                                        >
                                             <a
                                                 href={item.url}
                                                 className="subnav__link"
