@@ -1,8 +1,12 @@
 .slider-card {
-    max-width: 390px;
-    box-shadow: 0px 10px 0px #f5bd3f;
-    border-radius: 50px;
-    background-color: #fff3d7;
+    padding-left: 90px;
+
+    &__card {
+        max-width: 390px;
+        box-shadow: 0px 10px 0px #f5bd3f;
+        border-radius: 50px;
+        background-color: #fff3d7;
+    }
 
     &__content {
         position: relative;
@@ -61,6 +65,7 @@
 
 @media screen and (max-width: 320px) {
     .slider-card {
+        padding-left: 0;
         max-width: 280px;
 
         &__content {

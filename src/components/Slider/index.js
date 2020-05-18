@@ -1,31 +1,56 @@
 import React from 'react'
+import Slider from 'react-slick'
 import CardSlider from './CardSlider'
 import './Slider.scss'
+import 'slick-carousel/slick/slick.css'
 
-const Slider = ({ cards }) => {
+const MainSlider = ({ cards }) => {
+    function SampleArrow() {
+        return <div style={{ display: 'none' }} />
+    }
+
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        nextArrow: <SampleArrow />,
+        prevArrow: <SampleArrow />,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true,
+                },
+            },
+        ],
+    }
+
     return (
         <div className="slider">
             <div className="slider__content">
-                {cards.map((card) => (
-                    <div className="slider__card" id={card.id}>
-                        <CardSlider
+                <Slider {...settings}>
+                    {cards.map((card) => (
+                        <div
+                            key={card.id}
+                            className="slider__card"
                             id={card.id}
-                            card={card}
-                            latest={card.id === cards.length}
-                        />
-                    </div>
-                ))}
-            </div>
-
-            <div className="slider__nav">
-                {cards.map((card) => (
-                    <a href={`#${card.id}`} className="slider-nav__link">
-                        <span className="slider-nav__item" />
-                    </a>
-                ))}
+                        >
+                            <CardSlider
+                                id={card.id}
+                                card={card}
+                                latest={card.id === cards.length}
+                            />
+                        </div>
+                    ))}
+                </Slider>
             </div>
         </div>
     )
 }
 
-export default Slider
+export default MainSlider

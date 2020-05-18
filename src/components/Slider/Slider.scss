@@ -1,34 +1,61 @@
 .slider {
-    margin: 0 60px;
-    overflow: hidden;
+    position: relative;
+    margin: 0 30px;
     background: #ffc84d;
     border-radius: 50px;
-    padding: 95px 120px 130px 150px;
-
+    padding: 100px 120px 130px 150px;
     &__content {
-        display: flex;
-    }
-    &__card {
-        & + & {
-            margin-left: 150px;
+        .slick-slider {
+            display: flex;
         }
-    }
 
-    &__nav {
-        position: relative;
-    }
-    &-nav {
-        &__link {
-            & + & {
+        .slick-dots {
+            position: absolute;
+            bottom: -70px;
+            left: -60px;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+            }
+            li + li {
                 margin-left: 15px;
             }
+
+            button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                padding: 5px;
+                color: transparent;
+                border: 0;
+                border-radius: 50%;
+                outline: none;
+                background: #fff;
+                cursor: pointer;
+            }
+
+            .slick-active {
+                button {
+                    background: #f063b8;
+                }
+            }
         }
-        &__item {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #f063b8;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .slider {
+        margin: 0 -20px;
+        padding: 40px 20px 100px;
+        border-radius: 0;
+
+        &__content {
+            .slick-dots {
+                position: absolute;
+                bottom: -70px;
+                left: 45px;
+            }
         }
     }
 }
