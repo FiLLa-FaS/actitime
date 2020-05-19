@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import CardSlider from './CardSlider'
+
 import './Slider.scss'
 import 'slick-carousel/slick/slick.css'
 
@@ -19,7 +20,7 @@ const MainSlider = ({ cards }) => {
         prevArrow: <SampleArrow />,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 993,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

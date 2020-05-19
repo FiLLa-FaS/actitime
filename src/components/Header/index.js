@@ -1,11 +1,14 @@
-import React from 'react'
-import { NavHeader, NavHeaderMobile, UiButton, Container, UiDropdown } from '..'
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React, { useState } from 'react'
+import { NavHeader, NavHeaderMobile, UiButton, Container } from '..'
 import './Header.scss'
 import icn_logo from '../../assets/icons/icn_logo.svg'
 import icn_burger from '../../assets/icons/icn_burger.svg'
-import icn_close from '../../assets/icons/icn_close.svg'
 
 const Header = ({ nav }) => {
+    const [showSub, setShowSub] = useState(false)
     return (
         <div>
             <Container>
@@ -18,17 +21,19 @@ const Header = ({ nav }) => {
                     </div>
                     <div className="header__column">
                         <UiButton>Sign Up</UiButton>
-                        <UiDropdown
-                            className="header-dropdown"
-                            icon={icn_burger}
-                            activeIcon={icn_close}
-                        >
-                            <NavHeaderMobile nav={nav} />
-                        </UiDropdown>
+                        <img
+                            onClick={() => setShowSub(!showSub)}
+                            src={icn_burger}
+                            alt=""
+                        />
                     </div>
                 </header>
             </Container>
-            <NavHeaderMobile nav={nav} />
+            {showSub && (
+                <div className="header__sub">
+                    <NavHeaderMobile nav={nav} />
+                </div>
+            )}
         </div>
     )
 }

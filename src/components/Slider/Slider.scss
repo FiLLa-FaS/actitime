@@ -5,10 +5,16 @@
     border-radius: 50px;
     padding: 100px 120px 130px 150px;
     &__content {
-        .slick-slider {
-            display: flex;
-        }
+        margin: 0 -15px;
 
+        .slick-track {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            .slick-slide {
+                height: auto;
+            }
+        }
         .slick-dots {
             position: absolute;
             bottom: -70px;
@@ -41,6 +47,29 @@
                 }
             }
         }
+
+        .slick-slide {
+            & > div {
+                height: 100%;
+            }
+
+            .slider__card {
+                height: 100%;
+            }
+
+            .slider-card {
+                height: 100%;
+            }
+
+            .slider-card__card {
+                height: 100%;
+            }
+        }
+    }
+
+    &__card {
+        padding: 15px 15px;
+        box-sizing: border-box;
     }
 }
 
