@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce057f7eced14fb4400322667b0f19fa",
+    "revision": "8d6a3c5c07ddaa189f8099b8c27890f0",
     "url": "/actitime/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/actitime/static/css/2.76cf7f4f.chunk.css"
   },
   {
-    "revision": "3759c52f9032f1a22eea",
-    "url": "/actitime/static/css/main.25b81d23.chunk.css"
+    "revision": "3d714c13b87fb2d9689f",
+    "url": "/actitime/static/css/main.a00cbb3d.chunk.css"
   },
   {
     "revision": "7b38626ec36c7279ed26",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/actitime/static/js/2.322b9b28.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3759c52f9032f1a22eea",
+    "revision": "3d714c13b87fb2d9689f",
     "url": "/actitime/static/js/main.606769c8.chunk.js"
   },
   {
