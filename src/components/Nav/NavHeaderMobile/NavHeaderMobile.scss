@@ -13,12 +13,16 @@
         }
     }
     &__link {
-        font-family: Roboto;
+        text-decoration: none;
         font-style: normal;
         font-weight: 500;
         font-size: 27px;
         line-height: 277%;
-        color: #212353;
+    }
+    &__button {
+        padding: 45px 0;
+        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+        text-align: center;
     }
 
     .subnav-mobile {
@@ -41,12 +45,10 @@
         }
         &__link {
             text-decoration: none;
-            font-family: Roboto;
             font-style: normal;
             font-weight: normal;
             font-size: 25px;
             line-height: 277%;
-            color: #212353;
         }
     }
 }

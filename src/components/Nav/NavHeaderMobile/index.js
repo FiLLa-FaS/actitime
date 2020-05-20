@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavHeaderMobile.scss'
-import { UiDropdown } from '../..'
+import { UiDropdown, UiButton } from '../..'
 import icn_arrow_right from '../../../assets/icons/icn_arrow_right.svg'
 import icn_arrow_down from '../../../assets/icons/icn_arrow_down.svg'
 
@@ -34,13 +34,16 @@ const NavHeaderMobile = ({ nav }) => {
                             </UiDropdown>
                         )}
                         {!i.subnav && (
-                            <a href={i.url} className="nav-header__link">
+                            <a href={i.url} className="nav-mobile__link">
                                 {i.name}
                             </a>
                         )}
                     </li>
                 ))}
             </ul>
+            <div className="nav-mobile__button">
+                <UiButton>Sign Up</UiButton>
+            </div>
         </nav>
     )
 }

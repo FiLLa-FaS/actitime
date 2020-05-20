@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Header, Footer, UiTitle, Slider } from './components'
+import { Header, Footer, Hero } from './components'
 import './index.scss'
 
 function App() {
@@ -51,17 +51,7 @@ function App() {
         <div>
             <Header nav={nav_header} />
             <main>
-                <Container>
-                    <div className="row row__title">
-                        <UiTitle
-                            title="Features"
-                            excerpt="Some of the features and advantages that we provide for those of you who store data in this Data Warehouse."
-                        />
-                    </div>
-                    <div className="row row__slider">
-                        <Slider cards={slider_cards} />
-                    </div>
-                </Container>
+                <Hero slider_cards={slider_cards} />
             </main>
             <Footer nav={nav_footer} />
         </div>

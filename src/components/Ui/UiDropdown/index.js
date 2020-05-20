@@ -34,7 +34,15 @@ const UiDropdown = ({ title, icon, activeIcon = icon, children, hover }) => {
                 src={active ? activeIcon : icon}
                 alt=""
             />
-            <div className={`${active ? 'active' : ''}`}>{children}</div>
+            <div
+                className={`${
+                    active
+                        ? 'ui-dropdown__content active'
+                        : 'ui-dropdown__content'
+                }`}
+            >
+                {children}
+            </div>
         </div>
     )
 }

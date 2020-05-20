@@ -1,71 +1,31 @@
 .ui-dropdown {
-    display: flex;
+    display: block;
+    position: relative;
     cursor: pointer;
-
-    &:active,
-    &:hover {
-        .ui-dropdown__title {
-            color: #9c69e2;
-        }
-    }
+    outline: none;
 
     &__title {
         margin: 0;
-        padding-bottom: 30px;
-        font-family: Roboto;
+        padding-bottom: 0;
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
-        line-height: 160%;
-        color: #212353;
-        transition: color 0.2s;
+        font-size: 27px;
+        line-height: 277%;
     }
 
     &__icon {
-        margin-left: 5px;
-        padding-bottom: 30px;
+        position: absolute;
+        right: 0;
+        top: calc(37px - 9px);
+        padding-bottom: 0;
     }
 
-    div {
+    &__content {
         display: none;
+
         &.active {
             display: block;
             position: relative;
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .ui-dropdown {
-        display: block;
-        position: relative;
-
-        &__title {
-            padding-bottom: 0;
-
-            &.active {
-                margin-bottom: 10px;
-            }
-        }
-
-        &__icon {
-            position: absolute;
-            right: 0;
-            top: calc(14.5px - 9px);
-            padding-bottom: 0;
-        }
-        &:hover {
-            .ui-dropdown__title {
-                color: #212353;
-            }
-        }
-        &:active {
-            .ui-dropdown__title {
-                color: #212353;
-            }
-            .ui-dropdown__icon {
-                top: calc(14.5px - 5.5px);
-            }
         }
     }
 }
