@@ -20,7 +20,7 @@ const MainSlider = ({ cards }) => {
         prevArrow: <SampleArrow />,
         responsive: [
             {
-                breakpoint: 993,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

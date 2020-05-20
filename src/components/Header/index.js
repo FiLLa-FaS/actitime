@@ -6,6 +6,7 @@ import { NavHeader, NavHeaderMobile, UiButton, Container } from '..'
 import './Header.scss'
 import icn_logo from '../../assets/icons/icn_logo.svg'
 import icn_burger from '../../assets/icons/icn_burger.svg'
+import icn_close from '../../assets/icons/icn_close.svg'
 
 const Header = ({ nav }) => {
     const [showSub, setShowSub] = useState(false)
@@ -23,8 +24,9 @@ const Header = ({ nav }) => {
                         <UiButton>Sign Up</UiButton>
                         <img
                             onClick={() => setShowSub(!showSub)}
-                            src={icn_burger}
+                            src={showSub ? icn_close : icn_burger}
                             alt=""
+                            className="header__burger"
                         />
                     </div>
                 </header>

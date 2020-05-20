@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Header, Footer, UiTitle, Slider } from './components'
+import './index.scss'
 
 function App() {
     const nav_header = [
@@ -51,11 +52,15 @@ function App() {
             <Header nav={nav_header} />
             <main>
                 <Container>
-                    <UiTitle
-                        title="Features"
-                        excerpt="Some of the features and advantages that we provide for those of you who store data in this Data Warehouse."
-                    />
-                    <Slider cards={slider_cards} />
+                    <div className="row row__title">
+                        <UiTitle
+                            title="Features"
+                            excerpt="Some of the features and advantages that we provide for those of you who store data in this Data Warehouse."
+                        />
+                    </div>
+                    <div className="row row__slider">
+                        <Slider cards={slider_cards} />
+                    </div>
                 </Container>
             </main>
             <Footer nav={nav_footer} />

@@ -18,7 +18,17 @@ const UiDropdown = ({ title, icon, activeIcon = icon, children, hover }) => {
             onMouseEnter={hover && toggleDrawer(!active)}
             onMouseLeave={hover && toggleDrawer(!active)}
         >
-            {title && <p className="ui-dropdown__title">{title}</p>}
+            {title && (
+                <p
+                    className={`${
+                        active
+                            ? 'ui-dropdown__title active'
+                            : 'ui-dropdown__title'
+                    }`}
+                >
+                    {title}
+                </p>
+            )}
             <img
                 className="ui-dropdown__icon"
                 src={active ? activeIcon : icon}

@@ -1,7 +1,9 @@
 .slider-card {
-    padding-left: 60px;
+    height: 100%;
+    padding-left: 50px;
 
     &__card {
+        height: 100%;
         max-width: 390px;
         box-shadow: 0px 10px 0px #f5bd3f;
         border-radius: 50px;
@@ -11,6 +13,9 @@
     &__content {
         position: relative;
         padding: 40px 60px 40px 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__new {
@@ -63,10 +68,9 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .slider-card {
         padding-left: 0;
-        max-width: 280px;
 
         &__content {
             padding: 40px 30px;
