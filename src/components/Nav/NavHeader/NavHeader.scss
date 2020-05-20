@@ -14,6 +14,7 @@
             }
             .subnav__icon {
                 transform: rotate(180deg);
+                color: #9c69e2;
             }
             .subnav__list {
                 display: block;
@@ -54,6 +55,8 @@
 
         &__icon {
             margin-left: 5px;
+            font-size: 16px;
+            color: #212353;
         }
 
         &__list {
@@ -96,6 +99,7 @@
         &__link {
             text-decoration: none;
             cursor: pointer;
+            color: #212353;
             transition: color 0.2s;
 
             &:hover {
