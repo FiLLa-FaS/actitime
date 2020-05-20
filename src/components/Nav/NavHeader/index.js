@@ -1,11 +1,11 @@
 import React from 'react'
 import './NavHeader.scss'
-import icn_arrow_down from '../../../assets/icons/icn_arrow_small_down.svg'
+// import icn_arrow_down from '../../../assets/icons/icn_arrow_small_down.svg'
 // import icn_arrow_up from '../../../assets/icons/icn_arrow_small_up.svg'
 
 const NavHeader = ({ nav }) => {
     return (
-        <div className="nav-header">
+        <nav className="nav-header">
             <ul className="nav-header__list">
                 {nav.map((i) => (
                     <li key={i.id} className="nav-header__item">
@@ -17,11 +17,12 @@ const NavHeader = ({ nav }) => {
                         {i.subnav && (
                             <div className="subnav">
                                 <span className="subnav__title">{i.name}</span>
-                                <img
+                                {/* <img
                                     src={icn_arrow_down}
                                     alt=""
                                     className="subnav__icon"
-                                />
+                                /> */}
+                                <i className="fas fa-angle-up" />
                                 <ul className="subnav__list">
                                     {i.subnav.map((item) => (
                                         <li
@@ -42,7 +43,7 @@ const NavHeader = ({ nav }) => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </nav>
     )
 }
 

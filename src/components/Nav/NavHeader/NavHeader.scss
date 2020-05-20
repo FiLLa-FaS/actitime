@@ -1,11 +1,25 @@
 .nav-header {
     &__list {
         display: flex;
+        align-items: center;
         list-style-type: none;
         padding: 0;
         margin: 0;
     }
+
     &__item {
+        &:hover {
+            .subnav__title {
+                color: #9c69e2;
+            }
+            .subnav__icon {
+                transform: rotate(180deg);
+            }
+            .subnav__list {
+                display: block;
+            }
+        }
+
         & + & {
             margin-left: 47px;
         }
@@ -26,21 +40,8 @@
 
     .subnav {
         position: relative;
-        padding-bottom: 20px;
         display: flex;
         align-items: center;
-
-        &:hover {
-            .subnav__title {
-                color: #9c69e2;
-            }
-            .subnav__icon {
-                transform: rotate(180deg);
-            }
-            .subnav__list {
-                display: block;
-            }
-        }
 
         &__title {
             font-style: normal;
@@ -50,8 +51,10 @@
             cursor: pointer;
         }
 
-        &__icon {
+        i {
             margin-left: 5px;
+            font-size: 30px;
+            color: #212353;
         }
 
         &__list {
@@ -70,7 +73,7 @@
 
             &::after {
                 position: absolute;
-                top: -11px;
+                top: -10px;
                 left: calc(50% - 9px);
                 display: block;
                 width: 18px;
