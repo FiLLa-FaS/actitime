@@ -8,7 +8,7 @@ const NavHeader = ({ nav }) => {
         <div className="nav-header">
             <ul className="nav-header__list">
                 {nav.map((i) => (
-                    <li className="nav-header__item">
+                    <li key={i.id} className="nav-header__item">
                         {!i.subnav && (
                             <a href={i.url} className="nav-header__link">
                                 {i.name}
