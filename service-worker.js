@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/actitime/precache-manifest.c898f68ec778e7020e6b98ba6266527e.js"
+  "/actitime/precache-manifest.7e2010593508858ef1ddb4e2cf5eb5b8.js"
 );
 
 self.addEventListener('message', (event) => {
